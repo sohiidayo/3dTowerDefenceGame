@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6928584070864414102
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6960366073587366290}
+  - component: {fileID: 4867913029335099505}
+  m_Layer: 0
+  m_Name: BuildManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6960366073587366290
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6928584070864414102}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4867913029335099505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6928584070864414102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3097cfb394ea214a810d94c8afb194c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  laserTurretData:
+    turretPrefab: {fileID: 5660953312773703530, guid: cd4b8647cf8f2834e94e5f2a3c2a2c3a, type: 3}
+    cost: 1
+    turretUpgradedPrefab: {fileID: 984669824561349495, guid: e8eaa483b18a81c41893f122f153d151, type: 3}
+    costUpgraded: 1
+    type: 0
+  missileTurretData:
+    turretPrefab: {fileID: 1789329655975701868, guid: c2eedfc7a23702a48a1ea96eac50d5b8, type: 3}
+    cost: 1
+    turretUpgradedPrefab: {fileID: 2454879481990585459, guid: 196c424bd8ef8144daaf427ad016beb0, type: 3}
+    costUpgraded: 1
+    type: 1
+  standardTurretData:
+    turretPrefab: {fileID: 2220279436512388105, guid: 625efd81f9425e34383ab53b8f2d1874, type: 3}
+    cost: 1
+    turretUpgradedPrefab: {fileID: 4347874473032721145, guid: 684d7a7fca26dae4388e8016952811e6, type: 3}
+    costUpgraded: 1
+    type: 2
+  moneyText: {fileID: 0}
+  moneyAnimator: {fileID: 0}

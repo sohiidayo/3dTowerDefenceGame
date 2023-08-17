@@ -334,13 +334,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8404155942480900371}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 76.41171, y: 1.84, z: 97.19}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 518625136577552664}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7861699460362920687
 MeshFilter:
@@ -428,7 +428,6 @@ MonoBehaviour:
   speed: 10
   explosionEffect: {fileID: 3280680219166634599, guid: 2dca242f7b6aaa04cb50d3094f3b2fda, type: 3}
   hp: 250
-  hpSlider: {fileID: 9103353767620008109}
 --- !u!1 &8895900621824334111
 GameObject:
   m_ObjectHideFlags: 0

@@ -334,7 +334,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8404155942480900371}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 79.5, y: 1.84, z: 97.19}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -428,7 +428,6 @@ MonoBehaviour:
   speed: 10
   explosionEffect: {fileID: 6116585926610576821, guid: 863597accda089f4bbe76d0d23914318, type: 3}
   hp: 250
-  hpSlider: {fileID: 1570095650842540607}
 --- !u!1 &8925814311507384709
 GameObject:
   m_ObjectHideFlags: 0
