@@ -24,6 +24,13 @@ public class BuildManager : MonoBehaviour
     public GameObject upgradeCanvas;
     public Button buttonUpgrade;
 
+    private Animator upgradeCanvasAnimator;
+    void Start()
+    {
+        upgradeCanvasAnimator = upgradeCanvas.GetComponent<Animator>();
+    }
+
+
     public void OnLaserSelected(bool isOn)
     {
         if (isOn)
@@ -82,10 +89,10 @@ public class BuildManager : MonoBehaviour
                     else if (mapCube.turretGo !=null)
                     {
                         // Éý¼¶´¦Àí
-                        ShowUpgradeUI(mapCube.transform.position,mapCube.isUpgraded);
+
                         if (mapCube == selectedMapCube && upgradeCanvas.activeInHierarchy)
                         {
-                            HideUpgradeUI();
+                            StartCoroutine(HideUpgradeUI());
                         }
                         else
                         {
@@ -100,21 +107,29 @@ public class BuildManager : MonoBehaviour
     }
     void ShowUpgradeUI(Vector3 pos, bool isDisableUpgrade = false)
     {
+        StopCoroutine("HideUpgradeUI");
+        upgradeCanvas.SetActive(false);
         upgradeCanvas.SetActive(true);
         upgradeCanvas.transform.position = pos;
         buttonUpgrade.interactable = !isDisableUpgrade;
     }
-    void HideUpgradeUI()
+
+    IEnumerator HideUpgradeUI()
     {
+        upgradeCanvasAnimator.SetTrigger("Hide");
+        //upgradeCanvas.SetActive(false);
+        yield return new WaitForSeconds(0.2f);
         upgradeCanvas.SetActive(false);
     }
 
     public void OnUpgradeButtonDown()
     {
-
+        selectedMapCube.UpgradeTurret();
+        StartCoroutine(HideUpgradeUI());
     }
     public void OnDestroyButtonDown()
     {
-
+        selectedMapCube.DestroyTurret();
+        StartCoroutine(HideUpgradeUI());
     }
 }

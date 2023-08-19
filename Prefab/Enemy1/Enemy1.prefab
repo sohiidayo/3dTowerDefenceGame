@@ -425,7 +425,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cf253548cfae704ab10adb9f7a0526d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 1
   explosionEffect: {fileID: 3280680219166634599, guid: 2dca242f7b6aaa04cb50d3094f3b2fda, type: 3}
   hp: 250
 --- !u!1 &8895900621824334111

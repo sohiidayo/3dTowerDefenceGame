@@ -120,3 +120,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turretGo: {fileID: 0}
   buildEffect: {fileID: 8589286912403375879, guid: f06d877e4e2064749b282c4f641cef80, type: 3}
+  UpgradeEffect: {fileID: 2835358598602253681, guid: edad8ca6937e45c429282c2be28daad6, type: 3}
+  isUpgraded: 0
+  turretData:
+    turretPrefab: {fileID: 0}
+    cost: 0
+    turretUpgradedPrefab: {fileID: 0}
+    costUpgraded: 0
+    type: 0
+  yOffset: 0.5

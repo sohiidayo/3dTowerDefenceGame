@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Turret : MonoBehaviour
 {
-    public List<GameObject> enemys = new List<GameObject>();
+    private List<GameObject> enemys = new List<GameObject>();
     void OnTriggerEnter(Collider col)
     {
         if (col.tag == "Enemy")
