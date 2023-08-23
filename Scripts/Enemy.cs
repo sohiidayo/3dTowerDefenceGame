@@ -48,7 +48,7 @@ public class Enemy : MonoBehaviour
     {
         EnemySpawner.CountEnemyAlive--;
     }
-    public void TakeDamage(int damage)//-hp
+    public void TakeDamage(float damage)//-hp
     {
         if (hp <= 0) return;
         hp -= damage;
