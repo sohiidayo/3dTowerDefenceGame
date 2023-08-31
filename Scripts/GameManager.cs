@@ -36,6 +36,6 @@ public class GameManager : MonoBehaviour
     }
     public void OnButtonMenu()//²Ëµ¥
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene("Main");
     }
 }

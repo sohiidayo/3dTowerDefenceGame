@@ -15,7 +15,7 @@ public class BuildManager : MonoBehaviour
     //表示当前选择的炮台(场景中的游戏物体)
     private MapCube selectedMapCube;
     //初始金钱
-    public int money = 200;
+    public int money = 500;
     public TextMeshProUGUI moneyText;
 
     public Animator moneyAnimator;
@@ -26,13 +26,10 @@ public class BuildManager : MonoBehaviour
 
     private Animator upgradeCanvasAnimator;
 
-    
-
-
-
     void Start()
     {
         upgradeCanvasAnimator = upgradeCanvas.GetComponent<Animator>();
+        ChangeMoney(0);
     }
 
 

@@ -18683,7 +18683,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1830890920}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 3d3d58ce0ff19f9499fde016c50ca515, type: 2}
   m_CullingMode: 0
@@ -21716,6 +21716,17 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1830890923}
   m_SourcePrefab: {fileID: 100100000, guid: f7fdd0b1057be134bab1097c4b907e48, type: 3}
+--- !u!114 &948140086219460838 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6245199831116627195, guid: f7fdd0b1057be134bab1097c4b907e48, type: 3}
+  m_PrefabInstance: {fileID: 948140086219460837}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &2413210380337380552 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3667680288832007829, guid: c87de002e81466e41b223fcc448b206b, type: 3}
@@ -21881,7 +21892,7 @@ PrefabInstance:
     - target: {fileID: 4867913029335099505, guid: 5ec64394a620ec94dbd70b451e8310d2, type: 3}
       propertyPath: buttonUpgrade
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 948140086219460838}
     - target: {fileID: 4867913029335099505, guid: 5ec64394a620ec94dbd70b451e8310d2, type: 3}
       propertyPath: moneyAnimator
       value: 
@@ -21889,7 +21900,7 @@ PrefabInstance:
     - target: {fileID: 4867913029335099505, guid: 5ec64394a620ec94dbd70b451e8310d2, type: 3}
       propertyPath: upgradeCanvas
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1830890920}
     - target: {fileID: 4867913029335099505, guid: 5ec64394a620ec94dbd70b451e8310d2, type: 3}
       propertyPath: laserTurretData.cost
       value: 100
