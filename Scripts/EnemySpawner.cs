@@ -9,17 +9,19 @@ public class EnemySpawner : MonoBehaviour
     public Wave[] waves;
     public Transform START;
     public float waveRate = 0.5f;
+    private Coroutine coroutine;
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(SpawnEnemy());
+        coroutine = StartCoroutine(SpawnEnemy());
     }
 
     // Update is called once per frame
-    void Update()
+    public void Stop()
     {
-
+        StopCoroutine(coroutine);
     }
+
     IEnumerator SpawnEnemy()
     {
         foreach (Wave wave in waves)
@@ -37,5 +39,10 @@ public class EnemySpawner : MonoBehaviour
                 yield return 0;
             }
         }
+        while (CountEnemyAlive > 0)
+        {
+            yield return 0;
+        }
+        GameManager.Instance.Win();
     }
 }

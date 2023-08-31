@@ -10,15 +10,23 @@ public class Enemy : MonoBehaviour
     private int index = 0;
     public GameObject explosionEffect;
 
+    //击杀后增加金钱
+    public float bounty = 25;
+
     public float hp = 150;
     private float totalHp;
     private UnityEngine.UI.Slider hpSlider;
+
+    private BuildManager buildManager;
     // Start is called before the first frame update
     void Start()
     {
         positions = WayPoints.positions;
         totalHp = hp;
         hpSlider = GetComponentInChildren<UnityEngine.UI.Slider>();//从子类中搜索滑动条
+
+        GameObject buildManagerObject = GameObject.Find("BuildManager");
+        buildManager = buildManagerObject.GetComponent<BuildManager>();
     }
 
     void Update()
@@ -38,10 +46,12 @@ public class Enemy : MonoBehaviour
             ReachDestination();
         }
     }
+
+
     //达到终点
     void ReachDestination()
     {
- //       GameManager.Instance.Failed();
+        GameManager.Instance.Failed();//游戏失败
         GameObject.Destroy(this.gameObject);
     }
     void OnDestroy()
@@ -61,6 +71,7 @@ public class Enemy : MonoBehaviour
     void Die()
         {
             GameObject effect = GameObject.Instantiate(explosionEffect, transform.position, transform.rotation);
+            buildManager.ChangeMoney((int)bounty);
             Destroy(effect, 1f);
             Destroy(this.gameObject);
         }

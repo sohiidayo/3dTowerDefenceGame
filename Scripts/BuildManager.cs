@@ -14,8 +14,8 @@ public class BuildManager : MonoBehaviour
     private TurretData selectedTurretData;
     //表示当前选择的炮台(场景中的游戏物体)
     private MapCube selectedMapCube;
-
-    private int money = 1000;
+    //初始金钱
+    public int money = 200;
     public TextMeshProUGUI moneyText;
 
     public Animator moneyAnimator;
@@ -25,6 +25,11 @@ public class BuildManager : MonoBehaviour
     public Button buttonUpgrade;
 
     private Animator upgradeCanvasAnimator;
+
+    
+
+
+
     void Start()
     {
         upgradeCanvasAnimator = upgradeCanvas.GetComponent<Animator>();
@@ -58,6 +63,7 @@ public class BuildManager : MonoBehaviour
         money += change;
         moneyText.text = "$" + money;
     }
+
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -124,7 +130,15 @@ public class BuildManager : MonoBehaviour
 
     public void OnUpgradeButtonDown()
     {
-        selectedMapCube.UpgradeTurret();
+        if (money >= selectedMapCube.turretData.costUpgraded)
+        {
+            ChangeMoney(-selectedMapCube.turretData.costUpgraded);
+            selectedMapCube.UpgradeTurret();
+        }
+        else
+        {
+            moneyAnimator.SetTrigger("Flicker");
+        }
         StartCoroutine(HideUpgradeUI());
     }
     public void OnDestroyButtonDown()

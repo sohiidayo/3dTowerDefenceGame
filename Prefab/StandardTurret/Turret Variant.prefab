@@ -34,7 +34,7 @@ Transform:
   - {fileID: 8740774121516174644}
   - {fileID: 2220279436512294957}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3194421677360560305
 MonoBehaviour:
@@ -48,11 +48,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a78cc65c012c82d419a11fc3f010b3ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemys: []
   attackRateTime: 1
   firePosition: {fileID: 2220279436512294955}
   bulletPrefab: {fileID: 4372504510600357200, guid: 92d30065f3f126046ba448c23cb3415a, type: 3}
   head: {fileID: 8740774121516174644}
+  useLaser: 0
+  damageRate: 70
+  laserRenderer: {fileID: 0}
+  laserEffect: {fileID: 0}
 --- !u!135 &6799568275120414697
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -72,7 +75,7 @@ SphereCollider:
   m_ProvidesContacts: 1
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 20
+  m_Radius: 15
   m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!54 &-5857243141685545678
 Rigidbody:

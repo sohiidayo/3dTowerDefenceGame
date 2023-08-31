@@ -503,4 +503,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   explosionEffect: {fileID: 2597720217677263335, guid: 3a9199f38194ce243a8195e84028bea3, type: 3}
-  hp: 250
+  bounty: 25
+  hp: 2500

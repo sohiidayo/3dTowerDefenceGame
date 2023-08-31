@@ -34,7 +34,7 @@ Transform:
   - {fileID: 2454879481990873173}
   - {fileID: 5862802450950536646}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &1215087218851485496
 SphereCollider:
@@ -55,7 +55,7 @@ SphereCollider:
   m_ProvidesContacts: 1
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 30
+  m_Radius: 17
   m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!54 &4032111640078570052
 Rigidbody:
@@ -96,10 +96,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a78cc65c012c82d419a11fc3f010b3ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackRateTime: 0.1
+  attackRateTime: 1
   firePosition: {fileID: 5520552981379387152}
   bulletPrefab: {fileID: 3404190452660381183, guid: 29ccf12f22bbb4d4890755302f378933, type: 3}
   head: {fileID: 5862802450950536646}
+  useLaser: 0
+  damageRate: 70
+  laserRenderer: {fileID: 0}
+  laserEffect: {fileID: 0}
 --- !u!1 &2454879481990585461
 GameObject:
   m_ObjectHideFlags: 0

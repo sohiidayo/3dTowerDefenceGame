@@ -425,9 +425,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cf253548cfae704ab10adb9f7a0526d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 30
   explosionEffect: {fileID: 6116585926610576821, guid: 863597accda089f4bbe76d0d23914318, type: 3}
-  hp: 250
+  bounty: 25
+  hp: 750
 --- !u!1 &8925814311507384709
 GameObject:
   m_ObjectHideFlags: 0
